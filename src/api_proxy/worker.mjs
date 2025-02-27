@@ -331,7 +331,10 @@ const transformMessages = async (messages) => {
 const transformRequest = async (req) => ({
   ...await transformMessages(req.messages),
   safetySettings,
-  generationConfig: transformConfig(req),
+  generationConfig: {
+    ...transformConfig(req),
+    languageCode: "zh",
+  },
 });
 
 const generateChatcmplId = () => {
