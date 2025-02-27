@@ -20,29 +20,28 @@
             <button id="config-toggle" class="material-symbols-outlined">settings</button>
         </div>
         <div id="config-container" class="hidden-mobile">
-            <div class="config-wrapper">
+				<h3 class="config-title">设置</h3>
                 <div class="setting-container">
-                    <span class="setting-label">Sound: </span>
-                    <select id="voice-select">
-                        <span class="setting-label">语音: </span>
-                    	<select id="voice-select">
-                        <option value="cmn-CN-Standard-A">中文女声 A</option>
-                        <option value="cmn-CN-Standard-B">中文女声 B</option>
-                        <option value="cmn-CN-Standard-C">中文男声 A</option>
-                        <option value="cmn-CN-Standard-D">中文男声 B</option>
+                    <span class="setting-label">语音:</span>
+                    <select id="voice-select" class="styled-select">
+                        <option value="Puck">帕克 (男声)</option>
+                        <option value="Charon">卡戎 (男声)</option>
+                        <option value="Fenrir">芬尼尔 (男声)</option>
+                        <option value="Kore">科瑞 (女声)</option>
+                        <option value="Aoede" selected>奥伊德 (女声)</option>
                     </select>
                 </div>
                 <div class="setting-container">
-                    <span class="setting-label">Response Type: </span>
-                    <select id="response-type-select">
-                        <option value="text">Text</option>
-                        <option value="audio" selected>Audio</option>
+                    <span class="setting-label">响应类型:</span>
+                    <select id="response-type-select" class="styled-select">
+                        <option value="text">文本</option>
+                        <option value="audio" selected>语音</option>
                     </select>
                 </div>
                 <div class="setting-container">
-                    <span class="setting-label">Video FPS: </span>
-                    <input type="number" id="fps-input" placeholder="Video FPS" value="1" min="1" max="30" step="1"/>
-                    <span class="fps-help">Higher FPS need more network bandwidth</span>
+                    <span class="setting-label">视频帧率:</span>
+                    <input type="number" id="fps-input" class="styled-input" value="1" min="1" max="30" step="1"/>
+                    <span class="fps-help">更高的帧率需要更多的网络带宽</span>
                 </div>
                 <textarea id="system-instruction" placeholder="Enter custom system instructions..." rows="6"></textarea>
                 <button id="apply-config">Confirm</button>
