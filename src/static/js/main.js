@@ -260,15 +260,15 @@ async function connectToWebsocket() {
             speechConfig: {
                 voiceConfig: { 
                     prebuiltVoiceConfig: { 
-                        voiceName: voiceSelect.value    // You can change voice in the config.js file
+                        voiceName: voiceSelect.value,
+                        languageCode: "cmn-CN"    // 添加中文语言代码
                     }
                 }
             },
-
         },
         systemInstruction: {
             parts: [{
-                text: systemInstructionInput.value     // You can change system instruction in the config.js file
+                text: systemInstructionInput.value
             }],
         }
     };  
